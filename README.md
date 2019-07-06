@@ -14,6 +14,16 @@ In collect part data connections need to be created. A Data connection was creat
 
 This is the task of a data engineer. In this step <b>data discovery</b> will be performed, <b>business glossary terms</b> will be added and <b>governence rules and policies</b> are added. <b>Data lineage</b> will be also be demonstrated with this. 
 
+### Data Discovery 
+
+### Business Glossary 
+
+### Goverence
+
+### Data Lineage  
+Data lineage shows the interconnection between all terms, rules and the datasets. It can seen how the terms and rules are linked to the appropriate dataset. 
+
+<img src = "https://github.com/anchalbhalla/mortgage-default-prediction-icp4d/blob/master/gifs/data-lineage.gif">
 
 ## Analyse  
 
@@ -24,13 +34,21 @@ Insights gained:
 1. Showing how many people have applied for loans online
 2. Alot of people reside in the Sharjah and Dubai area
 3. <b>Insights </b> - People with higher income default the loan more
-4. </b> Insights </b> - People buying houses with higher sales price will deafault the loan more 
+4. <b> Insights </b> - People buying houses with higher sales price will deafault the loan more  
+
+<img src = "https://github.com/anchalbhalla/mortgage-default-prediction-icp4d/blob/master/gifs/visual.gif">
 
 ### Modelling - SPSS 
 
+Various models were tried and tested using SPSS modeler on IBM Cloud Pak for Data. But the best one was <b>Random Forest</b> and it gave accuracy of <b>90%</b>.
+
+<img src = "https://github.com/anchalbhalla/mortgage-default-prediction-icp4d/blob/master/gifs/spss.gif">
+
 ### Modelling - Notebook 
 
-A notebook will have to be created for this project as well since open scale currently works with Jupyter Notebooks only.
+A notebook will have to be created for this project as well since open scale currently works with Jupyter Notebooks only. 
+
+<img src = "https://github.com/anchalbhalla/mortgage-default-prediction-icp4d/blob/master/gifs/notebooks.gif">
 
 ## Infuse - Open Scale 
 To avoid biases in the model, <b>open scale</b> on IBM cloud PAK was used. It gives the bank employee the explainabilty required for reporting and reasoning to customers.  
@@ -43,4 +61,6 @@ To avoid biases in the model, <b>open scale</b> on IBM cloud PAK was used. It gi
 
 ## Front-End Application - Shiny App 
 
-The front end of this project was created using a shiny app. The model API end point needs to be added which will make a call to the models and then display the results in a graph form as seen in the gif below.
+The front end of this project was created using a shiny app. The model API end point needs to be added which will make a call to the models and then display the results in a graph form as seen in the gif below. 
+
+<img src = "https://github.com/anchalbhalla/mortgage-default-prediction-icp4d/blob/master/gifs/front-end.gif">
