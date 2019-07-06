@@ -1,0 +1,429 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<PMML version="4.2" xmlns="http://www.dmg.org/PMML-4_2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Header copyright="(C) Copyright IBM Corp. 1994, 2015">
+    <Application name="IBM SPSS Modeler" version="18.1"/>
+</Header>
+  <DataDictionary numberOfFields="12">
+    <DataField dataType="integer" name="Location" optype="continuous">
+      <Extension extender="spss" name="storageType" value="numeric"/>
+</DataField>
+    <DataField dataType="string" name="Residence" optype="categorical">
+      <Extension extender="spss" name="storageType" value="string"/>
+      <Value property="valid" value="Living with parents/guardian"/>
+      <Value property="valid" value="Owner Occupier"/>
+      <Value property="valid" value="Private Renting"/>
+      <Value property="valid" value="Public Housing"/>
+      <Value property="valid" value="Sheltered"/>
+</DataField>
+    <DataField dataType="double" name="Income" optype="continuous">
+      <Extension extender="spss" name="storageType" value="numeric"/>
+</DataField>
+    <DataField dataType="double" name="CCDebt" optype="continuous">
+      <Extension extender="spss" name="storageType" value="numeric"/>
+</DataField>
+    <DataField dataType="double" name="NumberOfCards" optype="continuous">
+      <Extension extender="spss" name="storageType" value="numeric"/>
+</DataField>
+    <DataField dataType="double" name="YearsCurrentEmployer" optype="continuous">
+      <Extension extender="spss" name="storageType" value="numeric"/>
+</DataField>
+    <DataField dataType="double" name="Loans" optype="continuous">
+      <Extension extender="spss" name="storageType" value="numeric"/>
+</DataField>
+    <DataField dataType="double" name="LoanAmount" optype="continuous">
+      <Extension extender="spss" name="storageType" value="numeric"/>
+</DataField>
+    <DataField dataType="integer" name="SalePrice" optype="continuous">
+      <Extension extender="spss" name="storageType" value="numeric"/>
+</DataField>
+    <DataField dataType="string" name="AppliedOnline" optype="categorical">
+      <Extension extender="spss" name="storageType" value="string"/>
+      <Extension extender="spss" name="flagTypeTrueValue" value="YES"/>
+      <Value property="valid" value="NO"/>
+      <Value property="valid" value="YES"/>
+</DataField>
+    <DataField dataType="double" name="YearCurrentAddress" optype="continuous">
+      <Extension extender="spss" name="storageType" value="numeric"/>
+</DataField>
+    <DataField dataType="string" name="MortgageDefault" optype="categorical">
+      <Extension extender="spss" name="storageType" value="string"/>
+      <Extension extender="spss" name="flagTypeTrueValue" value="YES"/>
+      <Value property="valid" value="NO"/>
+      <Value property="valid" value="YES"/>
+</DataField>
+</DataDictionary>
+  <TreeModel algorithmName="C5" functionName="classification" missingValueStrategy="weightedConfidence" modelName="MortgageDefault">
+    <Extension extender="spss" name="missingValueStrategy" value="weightedConfidence"/>
+    <MiningSchema>
+      <MiningField importance="0.120165" name="Location" usageType="active"/>
+      <MiningField importance="0.171962" name="Residence" usageType="active"/>
+      <MiningField importance="0.0969498" name="Income" usageType="active"/>
+      <MiningField importance="0.132009" name="CCDebt" usageType="active"/>
+      <MiningField importance="0.108948" name="NumberOfCards" usageType="active"/>
+      <MiningField importance="0.0733793" name="YearsCurrentEmployer" usageType="active"/>
+      <MiningField importance="0.0408216" name="Loans" usageType="active"/>
+      <MiningField importance="0.000676901" name="LoanAmount" usageType="active"/>
+      <MiningField importance="0.0520968" name="SalePrice" usageType="active"/>
+      <MiningField importance="0.0245768" name="AppliedOnline" usageType="active"/>
+      <MiningField importance="0.178415" name="YearCurrentAddress" usageType="active"/>
+      <MiningField name="MortgageDefault" usageType="predicted"/>
+</MiningSchema>
+    <Node defaultChild="1" id="0" recordCount="358" score="NO">
+      <Extension extender="spss" name="defaultChild" value="0"/>
+      <True/>
+      <ScoreDistribution confidence="0.5888888888888889" probability="0.5893854748603352" recordCount="211" value="NO"/>
+      <ScoreDistribution confidence="0.4111111111111111" probability="0.4106145251396648" recordCount="147" value="YES"/>
+      <Node defaultChild="9" id="1" recordCount="225" score="NO">
+        <Extension extender="spss" name="defaultChild" value="1"/>
+        <SimplePredicate field="Location" operator="lessOrEqual" value="105"/>
+        <ScoreDistribution confidence="0.6299559471365639" probability="0.6311111111111111" recordCount="142" value="NO"/>
+        <ScoreDistribution confidence="0.3700440528634361" probability="0.3688888888888889" recordCount="83" value="YES"/>
+        <Node defaultChild="3" id="2" recordCount="13" score="YES">
+          <Extension extender="spss" name="defaultChild" value="0"/>
+          <SimplePredicate field="Residence" operator="equal" value="Living with parents/guardian"/>
+          <ScoreDistribution confidence="0.4666666666666667" probability="0.46153846153846156" recordCount="6" value="NO"/>
+          <ScoreDistribution confidence="0.5333333333333333" probability="0.5384615384615384" recordCount="7" value="YES"/>
+          <Node defaultChild="4" id="3" recordCount="9" score="NO">
+            <Extension extender="spss" name="defaultChild" value="0"/>
+            <SimplePredicate field="Income" operator="lessOrEqual" value="52481"/>
+            <ScoreDistribution confidence="0.6363636363636364" probability="0.6666666666666666" recordCount="6" value="NO"/>
+            <ScoreDistribution confidence="0.36363636363636365" probability="0.3333333333333333" recordCount="3" value="YES"/>
+            <Node defaultChild="6" id="4" recordCount="5" score="YES">
+              <Extension extender="spss" name="defaultChild" value="1"/>
+              <SimplePredicate field="Income" operator="lessOrEqual" value="48021"/>
+              <ScoreDistribution confidence="0.42857142857142855" probability="0.4" recordCount="2" value="NO"/>
+              <ScoreDistribution confidence="0.5714285714285714" probability="0.6" recordCount="3" value="YES"/>
+              <Node id="5" recordCount="2" score="NO">
+                <SimplePredicate field="CCDebt" operator="lessOrEqual" value="329"/>
+                <ScoreDistribution confidence="0.75" probability="1.0" recordCount="2" value="NO"/>
+                <ScoreDistribution confidence="0.0" probability="0.0" recordCount="0" value="YES"/>
+</Node>
+              <Node id="6" recordCount="3" score="YES">
+                <SimplePredicate field="CCDebt" operator="greaterThan" value="329"/>
+                <ScoreDistribution confidence="0.0" probability="0.0" recordCount="0" value="NO"/>
+                <ScoreDistribution confidence="0.8" probability="1.0" recordCount="3" value="YES"/>
+</Node>
+</Node>
+            <Node id="7" recordCount="4" score="NO">
+              <SimplePredicate field="Income" operator="greaterThan" value="48021"/>
+              <ScoreDistribution confidence="0.8333333333333334" probability="1.0" recordCount="4" value="NO"/>
+              <ScoreDistribution confidence="0.0" probability="0.0" recordCount="0" value="YES"/>
+</Node>
+</Node>
+          <Node id="8" recordCount="4" score="YES">
+            <SimplePredicate field="Income" operator="greaterThan" value="52481"/>
+            <ScoreDistribution confidence="0.0" probability="0.0" recordCount="0" value="NO"/>
+            <ScoreDistribution confidence="0.8333333333333334" probability="1.0" recordCount="4" value="YES"/>
+</Node>
+</Node>
+        <Node defaultChild="10" id="9" recordCount="128" score="NO">
+          <Extension extender="spss" name="defaultChild" value="0"/>
+          <SimplePredicate field="Residence" operator="equal" value="Owner Occupier"/>
+          <ScoreDistribution confidence="0.6230769230769231" probability="0.625" recordCount="80" value="NO"/>
+          <ScoreDistribution confidence="0.3769230769230769" probability="0.375" recordCount="48" value="YES"/>
+          <Node defaultChild="11" id="10" recordCount="66" score="NO">
+            <Extension extender="spss" name="defaultChild" value="0"/>
+            <SimplePredicate field="NumberOfCards" operator="lessOrEqual" value="1"/>
+            <ScoreDistribution confidence="0.5588235294117647" probability="0.5606060606060606" recordCount="37" value="NO"/>
+            <ScoreDistribution confidence="0.4411764705882353" probability="0.4393939393939394" recordCount="29" value="YES"/>
+            <Node defaultChild="15" id="11" recordCount="37" score="NO">
+              <Extension extender="spss" name="defaultChild" value="1"/>
+              <SimplePredicate field="YearsCurrentEmployer" operator="lessOrEqual" value="12"/>
+              <ScoreDistribution confidence="0.717948717948718" probability="0.7297297297297297" recordCount="27" value="NO"/>
+              <ScoreDistribution confidence="0.28205128205128205" probability="0.2702702702702703" recordCount="10" value="YES"/>
+              <Node defaultChild="14" id="12" recordCount="16" score="NO">
+                <Extension extender="spss" name="defaultChild" value="1"/>
+                <SimplePredicate field="Loans" operator="lessOrEqual" value="0"/>
+                <ScoreDistribution confidence="0.8333333333333334" probability="0.875" recordCount="14" value="NO"/>
+                <ScoreDistribution confidence="0.16666666666666666" probability="0.125" recordCount="2" value="YES"/>
+                <Node id="13" recordCount="2" score="YES">
+                  <SimplePredicate field="LoanAmount" operator="lessOrEqual" value="6957"/>
+                  <ScoreDistribution confidence="0.0" probability="0.0" recordCount="0" value="NO"/>
+                  <ScoreDistribution confidence="0.75" probability="1.0" recordCount="2" value="YES"/>
+</Node>
+                <Node id="14" recordCount="14" score="NO">
+                  <SimplePredicate field="LoanAmount" operator="greaterThan" value="6957"/>
+                  <ScoreDistribution confidence="0.9375" probability="1.0" recordCount="14" value="NO"/>
+                  <ScoreDistribution confidence="0.0" probability="0.0" recordCount="0" value="YES"/>
+</Node>
+</Node>
+              <Node defaultChild="17" id="15" recordCount="21" score="NO">
+                <Extension extender="spss" name="defaultChild" value="1"/>
+                <SimplePredicate field="Loans" operator="greaterThan" value="0"/>
+                <ScoreDistribution confidence="0.6086956521739131" probability="0.6190476190476191" recordCount="13" value="NO"/>
+                <ScoreDistribution confidence="0.391304347826087" probability="0.38095238095238093" recordCount="8" value="YES"/>
+                <Node id="16" recordCount="8" score="NO">
+                  <SimplePredicate field="LoanAmount" operator="lessOrEqual" value="6622"/>
+                  <ScoreDistribution confidence="0.9" probability="1.0" recordCount="8" value="NO"/>
+                  <ScoreDistribution confidence="0.0" probability="0.0" recordCount="0" value="YES"/>
+</Node>
+                <Node defaultChild="18" id="17" recordCount="13" score="YES">
+                  <Extension extender="spss" name="defaultChild" value="0"/>
+                  <SimplePredicate field="LoanAmount" operator="greaterThan" value="6622"/>
+                  <ScoreDistribution confidence="0.4" probability="0.38461538461538464" recordCount="5" value="NO"/>
+                  <ScoreDistribution confidence="0.6" probability="0.6153846153846154" recordCount="8" value="YES"/>
+                  <Node id="18" recordCount="10" score="YES">
+                    <SimplePredicate field="SalePrice" operator="lessOrEqual" value="427125"/>
+                    <ScoreDistribution confidence="0.25" probability="0.2" recordCount="2" value="NO"/>
+                    <ScoreDistribution confidence="0.75" probability="0.8" recordCount="8" value="YES"/>
+</Node>
+                  <Node id="19" recordCount="3" score="NO">
+                    <SimplePredicate field="SalePrice" operator="greaterThan" value="427125"/>
+                    <ScoreDistribution confidence="0.8" probability="1.0" recordCount="3" value="NO"/>
+                    <ScoreDistribution confidence="0.0" probability="0.0" recordCount="0" value="YES"/>
+</Node>
+</Node>
+</Node>
+</Node>
+            <Node defaultChild="21" id="20" recordCount="29" score="YES">
+              <Extension extender="spss" name="defaultChild" value="0"/>
+              <SimplePredicate field="YearsCurrentEmployer" operator="greaterThan" value="12"/>
+              <ScoreDistribution confidence="0.3548387096774194" probability="0.3448275862068966" recordCount="10" value="NO"/>
+              <ScoreDistribution confidence="0.6451612903225806" probability="0.6551724137931034" recordCount="19" value="YES"/>
+              <Node id="21" recordCount="16" score="YES">
+                <SimplePredicate field="AppliedOnline" operator="equal" value="YES"/>
+                <ScoreDistribution confidence="0.2222222222222222" probability="0.1875" recordCount="3" value="NO"/>
+                <ScoreDistribution confidence="0.7777777777777778" probability="0.8125" recordCount="13" value="YES"/>
+</Node>
+              <Node defaultChild="23" id="22" recordCount="13" score="NO">
+                <Extension extender="spss" name="defaultChild" value="0"/>
+                <SimplePredicate field="AppliedOnline" operator="equal" value="NO"/>
+                <ScoreDistribution confidence="0.5333333333333333" probability="0.5384615384615384" recordCount="7" value="NO"/>
+                <ScoreDistribution confidence="0.4666666666666667" probability="0.46153846153846156" recordCount="6" value="YES"/>
+                <Node id="23" recordCount="7" score="YES">
+                  <SimplePredicate field="CCDebt" operator="lessOrEqual" value="1202"/>
+                  <ScoreDistribution confidence="0.2222222222222222" probability="0.14285714285714285" recordCount="1" value="NO"/>
+                  <ScoreDistribution confidence="0.7777777777777778" probability="0.8571428571428571" recordCount="6" value="YES"/>
+</Node>
+                <Node id="24" recordCount="6" score="NO">
+                  <SimplePredicate field="CCDebt" operator="greaterThan" value="1202"/>
+                  <ScoreDistribution confidence="0.875" probability="1.0" recordCount="6" value="NO"/>
+                  <ScoreDistribution confidence="0.0" probability="0.0" recordCount="0" value="YES"/>
+</Node>
+</Node>
+</Node>
+</Node>
+          <Node defaultChild="27" id="25" recordCount="62" score="NO">
+            <Extension extender="spss" name="defaultChild" value="1"/>
+            <SimplePredicate field="NumberOfCards" operator="greaterThan" value="1"/>
+            <ScoreDistribution confidence="0.6875" probability="0.6935483870967742" recordCount="43" value="NO"/>
+            <ScoreDistribution confidence="0.3125" probability="0.3064516129032258" recordCount="19" value="YES"/>
+            <Node id="26" recordCount="9" score="YES">
+              <SimplePredicate field="CCDebt" operator="lessOrEqual" value="461"/>
+              <ScoreDistribution confidence="0.18181818181818182" probability="0.1111111111111111" recordCount="1" value="NO"/>
+              <ScoreDistribution confidence="0.8181818181818182" probability="0.8888888888888888" recordCount="8" value="YES"/>
+</Node>
+            <Node id="27" recordCount="53" score="NO">
+              <SimplePredicate field="CCDebt" operator="greaterThan" value="461"/>
+              <ScoreDistribution confidence="0.7818181818181819" probability="0.7924528301886793" recordCount="42" value="NO"/>
+              <ScoreDistribution confidence="0.21818181818181817" probability="0.20754716981132076" recordCount="11" value="YES"/>
+</Node>
+</Node>
+</Node>
+        <Node defaultChild="30" id="28" recordCount="49" score="NO">
+          <Extension extender="spss" name="defaultChild" value="1"/>
+          <SimplePredicate field="Residence" operator="equal" value="Private Renting"/>
+          <ScoreDistribution confidence="0.6078431372549019" probability="0.6122448979591837" recordCount="30" value="NO"/>
+          <ScoreDistribution confidence="0.39215686274509803" probability="0.3877551020408163" recordCount="19" value="YES"/>
+          <Node id="29" recordCount="10" score="NO">
+            <SimplePredicate field="YearsCurrentEmployer" operator="lessOrEqual" value="4"/>
+            <ScoreDistribution confidence="0.9166666666666666" probability="1.0" recordCount="10" value="NO"/>
+            <ScoreDistribution confidence="0.0" probability="0.0" recordCount="0" value="YES"/>
+</Node>
+          <Node defaultChild="32" id="30" recordCount="39" score="NO">
+            <Extension extender="spss" name="defaultChild" value="1"/>
+            <SimplePredicate field="YearsCurrentEmployer" operator="greaterThan" value="4"/>
+            <ScoreDistribution confidence="0.5121951219512195" probability="0.5128205128205128" recordCount="20" value="NO"/>
+            <ScoreDistribution confidence="0.4878048780487805" probability="0.48717948717948717" recordCount="19" value="YES"/>
+            <Node id="31" recordCount="5" score="YES">
+              <SimplePredicate field="YearCurrentAddress" operator="lessOrEqual" value="3"/>
+              <ScoreDistribution confidence="0.0" probability="0.0" recordCount="0" value="NO"/>
+              <ScoreDistribution confidence="0.8571428571428571" probability="1.0" recordCount="5" value="YES"/>
+</Node>
+            <Node defaultChild="33" id="32" recordCount="34" score="NO">
+              <Extension extender="spss" name="defaultChild" value="0"/>
+              <SimplePredicate field="YearCurrentAddress" operator="greaterThan" value="3"/>
+              <ScoreDistribution confidence="0.5833333333333334" probability="0.5882352941176471" recordCount="20" value="NO"/>
+              <ScoreDistribution confidence="0.4166666666666667" probability="0.4117647058823529" recordCount="14" value="YES"/>
+              <Node id="33" recordCount="17" score="NO">
+                <SimplePredicate field="YearCurrentAddress" operator="lessOrEqual" value="15"/>
+                <ScoreDistribution confidence="0.7894736842105263" probability="0.8235294117647058" recordCount="14" value="NO"/>
+                <ScoreDistribution confidence="0.21052631578947367" probability="0.17647058823529413" recordCount="3" value="YES"/>
+</Node>
+              <Node defaultChild="35" id="34" recordCount="17" score="YES">
+                <Extension extender="spss" name="defaultChild" value="0"/>
+                <SimplePredicate field="YearCurrentAddress" operator="greaterThan" value="15"/>
+                <ScoreDistribution confidence="0.3684210526315789" probability="0.35294117647058826" recordCount="6" value="NO"/>
+                <ScoreDistribution confidence="0.631578947368421" probability="0.6470588235294118" recordCount="11" value="YES"/>
+                <Node defaultChild="36" id="35" recordCount="13" score="YES">
+                  <Extension extender="spss" name="defaultChild" value="0"/>
+                  <SimplePredicate field="YearCurrentAddress" operator="lessOrEqual" value="25"/>
+                  <ScoreDistribution confidence="0.2" probability="0.15384615384615385" recordCount="2" value="NO"/>
+                  <ScoreDistribution confidence="0.8" probability="0.8461538461538461" recordCount="11" value="YES"/>
+                  <Node id="36" recordCount="11" score="YES">
+                    <SimplePredicate field="SalePrice" operator="lessOrEqual" value="351500"/>
+                    <ScoreDistribution confidence="0.0" probability="0.0" recordCount="0" value="NO"/>
+                    <ScoreDistribution confidence="0.9230769230769231" probability="1.0" recordCount="11" value="YES"/>
+</Node>
+                  <Node id="37" recordCount="2" score="NO">
+                    <SimplePredicate field="SalePrice" operator="greaterThan" value="351500"/>
+                    <ScoreDistribution confidence="0.75" probability="1.0" recordCount="2" value="NO"/>
+                    <ScoreDistribution confidence="0.0" probability="0.0" recordCount="0" value="YES"/>
+</Node>
+</Node>
+                <Node id="38" recordCount="4" score="NO">
+                  <SimplePredicate field="YearCurrentAddress" operator="greaterThan" value="25"/>
+                  <ScoreDistribution confidence="0.8333333333333334" probability="1.0" recordCount="4" value="NO"/>
+                  <ScoreDistribution confidence="0.0" probability="0.0" recordCount="0" value="YES"/>
+</Node>
+</Node>
+</Node>
+</Node>
+</Node>
+        <Node defaultChild="40" id="39" recordCount="31" score="NO">
+          <Extension extender="spss" name="defaultChild" value="0"/>
+          <SimplePredicate field="Residence" operator="equal" value="Public Housing"/>
+          <ScoreDistribution confidence="0.696969696969697" probability="0.7096774193548387" recordCount="22" value="NO"/>
+          <ScoreDistribution confidence="0.30303030303030304" probability="0.2903225806451613" recordCount="9" value="YES"/>
+          <Node defaultChild="42" id="40" recordCount="28" score="NO">
+            <Extension extender="spss" name="defaultChild" value="1"/>
+            <SimplePredicate field="SalePrice" operator="lessOrEqual" value="429175"/>
+            <ScoreDistribution confidence="0.7666666666666667" probability="0.7857142857142857" recordCount="22" value="NO"/>
+            <ScoreDistribution confidence="0.23333333333333334" probability="0.21428571428571427" recordCount="6" value="YES"/>
+            <Node id="41" recordCount="5" score="YES">
+              <SimplePredicate field="SalePrice" operator="lessOrEqual" value="171500"/>
+              <ScoreDistribution confidence="0.2857142857142857" probability="0.2" recordCount="1" value="NO"/>
+              <ScoreDistribution confidence="0.7142857142857143" probability="0.8" recordCount="4" value="YES"/>
+</Node>
+            <Node id="42" recordCount="23" score="NO">
+              <SimplePredicate field="SalePrice" operator="greaterThan" value="171500"/>
+              <ScoreDistribution confidence="0.88" probability="0.9130434782608695" recordCount="21" value="NO"/>
+              <ScoreDistribution confidence="0.12" probability="0.08695652173913043" recordCount="2" value="YES"/>
+</Node>
+</Node>
+          <Node id="43" recordCount="3" score="YES">
+            <SimplePredicate field="SalePrice" operator="greaterThan" value="429175"/>
+            <ScoreDistribution confidence="0.0" probability="0.0" recordCount="0" value="NO"/>
+            <ScoreDistribution confidence="0.8" probability="1.0" recordCount="3" value="YES"/>
+</Node>
+</Node>
+        <Node id="44" recordCount="4" score="NO">
+          <SimplePredicate field="Residence" operator="equal" value="Sheltered"/>
+          <ScoreDistribution confidence="0.8333333333333334" probability="1.0" recordCount="4" value="NO"/>
+          <ScoreDistribution confidence="0.0" probability="0.0" recordCount="0" value="YES"/>
+</Node>
+</Node>
+      <Node defaultChild="46" id="45" recordCount="133" score="NO">
+        <Extension extender="spss" name="defaultChild" value="0"/>
+        <SimplePredicate field="Location" operator="greaterThan" value="105"/>
+        <ScoreDistribution confidence="0.5185185185185185" probability="0.518796992481203" recordCount="69" value="NO"/>
+        <ScoreDistribution confidence="0.48148148148148145" probability="0.48120300751879697" recordCount="64" value="YES"/>
+        <Node defaultChild="48" id="46" recordCount="81" score="YES">
+          <Extension extender="spss" name="defaultChild" value="1"/>
+          <SimplePredicate field="LoanAmount" operator="lessOrEqual" value="9375"/>
+          <ScoreDistribution confidence="0.3855421686746988" probability="0.38271604938271603" recordCount="31" value="NO"/>
+          <ScoreDistribution confidence="0.6144578313253012" probability="0.6172839506172839" recordCount="50" value="YES"/>
+          <Node id="47" recordCount="6" score="NO">
+            <SimplePredicate field="SalePrice" operator="lessOrEqual" value="145500"/>
+            <ScoreDistribution confidence="0.875" probability="1.0" recordCount="6" value="NO"/>
+            <ScoreDistribution confidence="0.0" probability="0.0" recordCount="0" value="YES"/>
+</Node>
+          <Node defaultChild="49" id="48" recordCount="75" score="YES">
+            <Extension extender="spss" name="defaultChild" value="0"/>
+            <SimplePredicate field="SalePrice" operator="greaterThan" value="145500"/>
+            <ScoreDistribution confidence="0.33766233766233766" probability="0.3333333333333333" recordCount="25" value="NO"/>
+            <ScoreDistribution confidence="0.6623376623376623" probability="0.6666666666666666" recordCount="50" value="YES"/>
+            <Node defaultChild="51" id="49" recordCount="47" score="YES">
+              <Extension extender="spss" name="defaultChild" value="1"/>
+              <SimplePredicate field="AppliedOnline" operator="equal" value="YES"/>
+              <ScoreDistribution confidence="0.24489795918367346" probability="0.23404255319148937" recordCount="11" value="NO"/>
+              <ScoreDistribution confidence="0.7551020408163265" probability="0.7659574468085106" recordCount="36" value="YES"/>
+              <Node id="50" recordCount="7" score="NO">
+                <SimplePredicate field="CCDebt" operator="lessOrEqual" value="267"/>
+                <ScoreDistribution confidence="0.6666666666666666" probability="0.7142857142857143" recordCount="5" value="NO"/>
+                <ScoreDistribution confidence="0.3333333333333333" probability="0.2857142857142857" recordCount="2" value="YES"/>
+</Node>
+              <Node defaultChild="53" id="51" recordCount="40" score="YES">
+                <Extension extender="spss" name="defaultChild" value="1"/>
+                <SimplePredicate field="CCDebt" operator="greaterThan" value="267"/>
+                <ScoreDistribution confidence="0.16666666666666666" probability="0.15" recordCount="6" value="NO"/>
+                <ScoreDistribution confidence="0.8333333333333334" probability="0.85" recordCount="34" value="YES"/>
+                <Node id="52" recordCount="19" score="YES">
+                  <SimplePredicate field="YearsCurrentEmployer" operator="lessOrEqual" value="15"/>
+                  <ScoreDistribution confidence="0.0" probability="0.0" recordCount="0" value="NO"/>
+                  <ScoreDistribution confidence="0.9523809523809523" probability="1.0" recordCount="19" value="YES"/>
+</Node>
+                <Node defaultChild="55" id="53" recordCount="21" score="YES">
+                  <Extension extender="spss" name="defaultChild" value="1"/>
+                  <SimplePredicate field="YearsCurrentEmployer" operator="greaterThan" value="15"/>
+                  <ScoreDistribution confidence="0.30434782608695654" probability="0.2857142857142857" recordCount="6" value="NO"/>
+                  <ScoreDistribution confidence="0.6956521739130435" probability="0.7142857142857143" recordCount="15" value="YES"/>
+                  <Node id="54" recordCount="3" score="NO">
+                    <SimplePredicate field="Income" operator="lessOrEqual" value="44270"/>
+                    <ScoreDistribution confidence="0.8" probability="1.0" recordCount="3" value="NO"/>
+                    <ScoreDistribution confidence="0.0" probability="0.0" recordCount="0" value="YES"/>
+</Node>
+                  <Node id="55" recordCount="18" score="YES">
+                    <SimplePredicate field="Income" operator="greaterThan" value="44270"/>
+                    <ScoreDistribution confidence="0.2" probability="0.16666666666666666" recordCount="3" value="NO"/>
+                    <ScoreDistribution confidence="0.8" probability="0.8333333333333334" recordCount="15" value="YES"/>
+</Node>
+</Node>
+</Node>
+</Node>
+            <Node defaultChild="58" id="56" recordCount="28" score="YES">
+              <Extension extender="spss" name="defaultChild" value="1"/>
+              <SimplePredicate field="AppliedOnline" operator="equal" value="NO"/>
+              <ScoreDistribution confidence="0.5" probability="0.5" recordCount="14" value="NO"/>
+              <ScoreDistribution confidence="0.5" probability="0.5" recordCount="14" value="YES"/>
+              <Node id="57" recordCount="9" score="YES">
+                <SimpleSetPredicate booleanOperator="isIn" field="Residence">
+                  <Array n="2" type="string">"Living with parents/guardian" "Public Housing"</Array>
+</SimpleSetPredicate>
+                <ScoreDistribution confidence="0.2727272727272727" probability="0.2222222222222222" recordCount="2" value="NO"/>
+                <ScoreDistribution confidence="0.7272727272727273" probability="0.7777777777777778" recordCount="7" value="YES"/>
+</Node>
+              <Node defaultChild="60" id="58" recordCount="10" score="YES">
+                <Extension extender="spss" name="defaultChild" value="1"/>
+                <SimpleSetPredicate booleanOperator="isIn" field="Residence">
+                  <Array n="1" type="string">"Owner Occupier"</Array>
+</SimpleSetPredicate>
+                <ScoreDistribution confidence="0.3333333333333333" probability="0.3" recordCount="3" value="NO"/>
+                <ScoreDistribution confidence="0.6666666666666666" probability="0.7" recordCount="7" value="YES"/>
+                <Node id="59" recordCount="3" score="NO">
+                  <SimplePredicate field="NumberOfCards" operator="lessOrEqual" value="1"/>
+                  <ScoreDistribution confidence="0.8" probability="1.0" recordCount="3" value="NO"/>
+                  <ScoreDistribution confidence="0.0" probability="0.0" recordCount="0" value="YES"/>
+</Node>
+                <Node id="60" recordCount="7" score="YES">
+                  <SimplePredicate field="NumberOfCards" operator="greaterThan" value="1"/>
+                  <ScoreDistribution confidence="0.0" probability="0.0" recordCount="0" value="NO"/>
+                  <ScoreDistribution confidence="0.8888888888888888" probability="1.0" recordCount="7" value="YES"/>
+</Node>
+</Node>
+              <Node id="61" recordCount="9" score="NO">
+                <SimpleSetPredicate booleanOperator="isIn" field="Residence">
+                  <Array n="1" type="string">"Private Renting"</Array>
+</SimpleSetPredicate>
+                <ScoreDistribution confidence="0.9090909090909091" probability="1.0" recordCount="9" value="NO"/>
+                <ScoreDistribution confidence="0.0" probability="0.0" recordCount="0" value="YES"/>
+</Node>
+              <Node id="62" recordCount="0" score="YES">
+                <SimpleSetPredicate booleanOperator="isIn" field="Residence">
+                  <Array n="1" type="string">"Sheltered"</Array>
+</SimpleSetPredicate>
+                <ScoreDistribution confidence="0.0" probability="0.0" recordCount="0" value="NO"/>
+                <ScoreDistribution confidence="0.0" probability="0.0" recordCount="0" value="YES"/>
+</Node>
+</Node>
+</Node>
+</Node>
+        <Node id="63" recordCount="52" score="NO">
+          <SimplePredicate field="LoanAmount" operator="greaterThan" value="9375"/>
+          <ScoreDistribution confidence="0.7222222222222222" probability="0.7307692307692307" recordCount="38" value="NO"/>
+          <ScoreDistribution confidence="0.2777777777777778" probability="0.2692307692307692" recordCount="14" value="YES"/>
+</Node>
+</Node>
+</Node>
+</TreeModel>
+</PMML>

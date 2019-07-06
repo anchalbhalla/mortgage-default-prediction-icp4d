@@ -1,0 +1,1 @@
+{"class":"org.apache.spark.ml.feature.VectorAssembler","timestamp":1557949463600,"sparkVersion":"2.3.2","uid":"VectorAssembler_45b2b8975daf8a5d8cff","paramMap":{"inputCols":["Income","AppliedOnlineEncoded","ResidenceEncoded","YearCurrentAddress","YearsCurrentEmployer","NumberOfCards","CCDebt","Loans","LoanAmount","SalePrice","Location"],"outputCol":"features"}}

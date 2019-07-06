@@ -1,0 +1,779 @@
+{
+  "name": "New dashboard",
+  "layout": {
+    "id": "page0",
+    "items": [
+      {
+        "id": "page1",
+        "items": [
+          {
+            "id": "model0000016abd17b283_00000004",
+            "style": {
+              "left": "21px",
+              "top": "50px",
+              "height": "420px",
+              "width": "500px"
+            },
+            "type": "widget"
+          },
+          {
+            "id": "model0000016abd191510_00000002",
+            "style": {
+              "left": "640px",
+              "top": "83px",
+              "height": "420px",
+              "width": "500px"
+            },
+            "type": "widget"
+          },
+          {
+            "id": "model0000016abd1a7176_00000004",
+            "style": {
+              "left": "21px",
+              "top": "598px",
+              "height": "420px",
+              "width": "500px"
+            },
+            "type": "widget",
+            "clones": 1
+          },
+          {
+            "id": "model0000016abd1bd8dd_00000002",
+            "from": "model0000016abd1a7176_00000004",
+            "style": {
+              "left": "605px",
+              "top": "598px",
+              "height": "420px",
+              "width": "500px"
+            },
+            "type": "widget"
+          },
+          {
+            "id": "model0000016abd1e0758_00000000",
+            "style": {
+              "left": "512px",
+              "top": "1083px",
+              "height": "420px",
+              "width": "500px"
+            },
+            "type": "widget"
+          },
+          {
+            "id": "model0000016abd1eac64_00000004",
+            "style": {
+              "left": "12px",
+              "top": "1099px",
+              "height": "420px",
+              "width": "500px"
+            },
+            "type": "widget"
+          },
+          {
+            "id": "model0000016abd233c5c_00000000",
+            "style": {
+              "width": "200px",
+              "height": "50px",
+              "top": "12px",
+              "left": "121px"
+            },
+            "type": "widget",
+            "clones": 1
+          },
+          {
+            "id": "model0000016abd2343a3_00000000",
+            "style": {
+              "width": "361px",
+              "height": "46px",
+              "top": "503px",
+              "left": "62px"
+            },
+            "type": "widget",
+            "clones": 1
+          },
+          {
+            "id": "model0000016abd23b2b4_00000000",
+            "from": "model0000016abd233c5c_00000000",
+            "style": {
+              "width": "200px",
+              "height": "50px",
+              "top": "12px",
+              "left": "727px"
+            },
+            "type": "widget"
+          },
+          {
+            "id": "model0000016abd24b4c2_00000000",
+            "from": "model0000016abd2343a3_00000000",
+            "style": {
+              "width": "361px",
+              "height": "46px",
+              "top": "503px",
+              "left": "616px"
+            },
+            "type": "widget"
+          },
+          {
+            "id": "model0000016abd251eea_00000000",
+            "style": {
+              "width": "200px",
+              "height": "50px",
+              "top": "1018px",
+              "left": "412px"
+            },
+            "type": "widget"
+          }
+        ],
+        "type": "absolute",
+        "title": {
+          "translationTable": {
+            "Default": "Tab 1"
+          }
+        },
+        "templateName": "NoTemplate"
+      }
+    ],
+    "style": {
+      "height": "100%"
+    },
+    "type": "tab"
+  },
+  "theme": "defaultTheme",
+  "version": 1009,
+  "eventGroups": [
+    {
+      "id": "page1:1",
+      "widgetIds": [
+        "model0000016abd17b283_00000004",
+        "model0000016abd191510_00000002",
+        "model0000016abd1a7176_00000004",
+        "model0000016abd1bd8dd_00000002",
+        "model0000016abd1e0758_00000000",
+        "model0000016abd1eac64_00000004"
+      ]
+    }
+  ],
+  "properties": {
+    "defaultLocale": "Default"
+  },
+  "dataSources": {
+    "version": "1.0",
+    "sources": [
+      {
+        "id": "model0000016abd13e9d5_00000000",
+        "assetId": "assetId0000016abd13e9d4_00000000",
+        "clientId": "eyJwcm9qZWN0IjoiTW9ydGdhZ2UgRGVmYXVsdCBQcmVkaWN0aW9uIiwibmFtZSI6Ik1vcnRnYWdlX1RyYWluaW5nIERhdGEiLCJ0eXBlIjoiQ1NWIn0=",
+        "module": {
+          "identifier": "aMortgage_Training_Data",
+          "label": "Mortgage_Training Data",
+          "source": {
+            "id": "Mortgage_Training Data",
+            "srcUrl": {
+              "property": [
+                {
+                  "name": "separator",
+                  "value": ","
+                },
+                {
+                  "name": "ColumnNamesLine",
+                  "value": "true"
+                },
+                {
+                  "name": "headers",
+                  "value": [
+                    {
+                      "name": "Authorization",
+                      "value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImNvbnRlc3RhbnQyIiwic3ViIjoiY29udGVzdGFudDIiLCJpc3MiOiJLTk9YU1NPIiwiYXVkIjoiRFNYIiwicm9sZSI6IkFkbWluIiwicGVybWlzc2lvbnMiOlsiYWRtaW5pc3RyYXRvciIsImRlcGxveW1lbnRfYWRtaW4iLCJhY2Nlc3NfY2F0YWxvZyIsInZpcnR1YWxpemVfdHJhbnNmb3JtIiwiY2FuX3Byb3Zpc2lvbiIsIm1hbmFnZV9jYXRhbG9nIiwibWFuYWdlX3BvbGljaWVzIiwiYWNjZXNzX3BvbGljaWVzIl0sInVpZCI6IjEwMDIiLCJkaXNwbGF5X25hbWUiOiJ0ZWFtMiIsImlhdCI6MTU1ODU0MDgyMywiZXhwIjoxNTU4NTg0MDIzfQ.N2IKACqYzr7EtjPtACcEdUavWRBJ2mIEYuHtfOziLFw0sLOJS9-MI4vtu2eUiwf0N2Wy-Ieg6a-0lQa3bVcTf1QEadSAq7J9UTf5cp-lWrv-Zq_kUvYR3JawvSv10E7Q1Mj7ePZF2YYxzYg1LW0rCVo0DIp5Gc5Nj2MV0vKtCQCgBjXR29Kedm5egtFpXhC7cO-ZNfWwH7tyy7YMaA1xpaSi4dqvHTqC_dQk6VxKKivBMwrp78hcWztx-AqzaLLHDSjJo7UVpEdQDRmh8ZryHKsLz61JqFQl9nbaEum3-o500-Lj-qR3mS3XENBGKE-y7yf3iPbWMr8IYYM7mX20QA"
+                    }
+                  ]
+                }
+              ],
+              "sourceUrl": "http://dsx-core-svc:3000/v3/project/Mortgage%20Default%20Prediction/asset/Mortgage_Training%20Data.csv/download"
+            }
+          },
+          "table": {
+            "column": [
+              {
+                "datatype": "FLOAT",
+                "description": "ID",
+                "label": "ID",
+                "name": "aID",
+                "nullable": true,
+                "regularAggregate": "countDistinct",
+                "taxonomyFamily": "cNone",
+                "usage": "identifier"
+              },
+              {
+                "datatype": "FLOAT",
+                "description": "Income",
+                "label": "Income",
+                "name": "aIncome",
+                "nullable": true,
+                "regularAggregate": "total",
+                "taxonomyFamily": "cNone",
+                "usage": "fact"
+              },
+              {
+                "datatype": "NVARCHAR(MAX)",
+                "description": "AppliedOnline",
+                "label": "AppliedOnline",
+                "name": "aAppliedOnline",
+                "nullable": true,
+                "regularAggregate": "countDistinct",
+                "taxonomyFamily": "cNone",
+                "usage": "attribute"
+              },
+              {
+                "datatype": "NVARCHAR(MAX)",
+                "description": "Residence",
+                "label": "Residence",
+                "name": "aResidence",
+                "nullable": true,
+                "regularAggregate": "countDistinct",
+                "taxonomyFamily": "cNone",
+                "usage": "attribute"
+              },
+              {
+                "datatype": "FLOAT",
+                "description": "YearCurrentAddress",
+                "label": "YearCurrentAddress",
+                "name": "aYearCurrentAddress",
+                "nullable": true,
+                "regularAggregate": "countDistinct",
+                "taxonomyFamily": "cYear",
+                "usage": "identifier"
+              },
+              {
+                "datatype": "FLOAT",
+                "description": "YearsCurrentEmployer",
+                "label": "YearsCurrentEmployer",
+                "name": "aYearsCurrentEmployer",
+                "nullable": true,
+                "regularAggregate": "countDistinct",
+                "taxonomyFamily": "cYear",
+                "usage": "identifier"
+              },
+              {
+                "datatype": "FLOAT",
+                "description": "NumberOfCards",
+                "label": "NumberOfCards",
+                "name": "aNumberOfCards",
+                "nullable": true,
+                "regularAggregate": "total",
+                "taxonomyFamily": "cNone",
+                "usage": "fact"
+              },
+              {
+                "datatype": "FLOAT",
+                "description": "CCDebt",
+                "label": "CCDebt",
+                "name": "aCCDebt",
+                "nullable": true,
+                "regularAggregate": "total",
+                "taxonomyFamily": "cNone",
+                "usage": "fact"
+              },
+              {
+                "datatype": "FLOAT",
+                "description": "Loans",
+                "label": "Loans",
+                "name": "aLoans",
+                "nullable": true,
+                "regularAggregate": "total",
+                "taxonomyFamily": "cNone",
+                "usage": "fact"
+              },
+              {
+                "datatype": "FLOAT",
+                "description": "LoanAmount",
+                "label": "LoanAmount",
+                "name": "aLoanAmount",
+                "nullable": true,
+                "regularAggregate": "total",
+                "taxonomyFamily": "cNone",
+                "usage": "fact"
+              },
+              {
+                "datatype": "BIGINT",
+                "description": "SalePrice",
+                "label": "SalePrice",
+                "name": "aSalePrice",
+                "nullable": true,
+                "regularAggregate": "total",
+                "taxonomyFamily": "cNone",
+                "usage": "fact"
+              },
+              {
+                "datatype": "BIGINT",
+                "description": "Location",
+                "label": "Location",
+                "name": "aLocation",
+                "nullable": true,
+                "regularAggregate": "total",
+                "taxonomyFamily": "cNone",
+                "usage": "fact"
+              },
+              {
+                "datatype": "NVARCHAR(MAX)",
+                "description": "MortgageDefault",
+                "label": "MortgageDefault",
+                "name": "aMortgageDefault",
+                "nullable": true,
+                "regularAggregate": "countDistinct",
+                "taxonomyFamily": "cNone",
+                "usage": "attribute"
+              }
+            ],
+            "name": "MortgageTrainingData"
+          },
+          "xsd": "https://ibm.com/daas/module/1.0/module.xsd"
+        },
+        "name": "Mortgage_Training Data",
+        "shaping": {
+          "embeddedModuleUpToDate": true
+        }
+      }
+    ]
+  },
+  "pageContext": [],
+  "drillThrough": [],
+  "widgets": {
+    "model0000016abd17b283_00000004": {
+      "id": "model0000016abd17b283_00000004",
+      "data": {
+        "dataViews": [
+          {
+            "modelRef": "model0000016abd13e9d5_00000000",
+            "dataItems": [
+              {
+                "id": "model0000016abd17b283_00000000",
+                "itemId": "MortgageTrainingData.aIncome",
+                "itemLabel": "Income",
+                "aggregate": "count"
+              },
+              {
+                "id": "model0000016abd17b283_00000001",
+                "itemId": "MortgageTrainingData.aMortgageDefault",
+                "itemLabel": "MortgageDefault"
+              },
+              {
+                "id": "model0000016abd184c97_00000000",
+                "itemId": "MortgageTrainingData.aMortgageDefault",
+                "itemLabel": "MortgageDefault"
+              }
+            ],
+            "id": "model0000016abd17b283_00000002"
+          }
+        ]
+      },
+      "slotmapping": {
+        "slots": [
+          {
+            "name": "categories",
+            "dataItems": [
+              "model0000016abd17b283_00000000"
+            ],
+            "dataItemSettings": [],
+            "caption": "Bars",
+            "id": "categories",
+            "layerId": "data"
+          },
+          {
+            "name": "color",
+            "dataItems": [
+              "model0000016abd184c97_00000000"
+            ],
+            "caption": "Color",
+            "id": "color"
+          },
+          {
+            "name": "values",
+            "dataItems": [
+              "model0000016abd17b283_00000001"
+            ],
+            "caption": "Length",
+            "id": "values"
+          }
+        ]
+      },
+      "type": "live",
+      "name": {
+        "translationTable": {}
+      },
+      "localFilters": [],
+      "visId": "com.ibm.vis.rave2bundlecolumn"
+    },
+    "model0000016abd191510_00000002": {
+      "id": "model0000016abd191510_00000002",
+      "data": {
+        "dataViews": [
+          {
+            "modelRef": "model0000016abd13e9d5_00000000",
+            "dataItems": [
+              {
+                "id": "model0000016abd19150f_00000000",
+                "itemId": "MortgageTrainingData.aSalePrice",
+                "itemLabel": "SalePrice"
+              },
+              {
+                "id": "model0000016abd19150f_00000001",
+                "itemId": "MortgageTrainingData.aMortgageDefault",
+                "itemLabel": "MortgageDefault"
+              },
+              {
+                "id": "model0000016abd195045_00000000",
+                "itemId": "MortgageTrainingData.aMortgageDefault",
+                "itemLabel": "MortgageDefault"
+              }
+            ],
+            "id": "model0000016abd191510_00000000"
+          }
+        ]
+      },
+      "slotmapping": {
+        "slots": [
+          {
+            "name": "categories",
+            "dataItems": [
+              "model0000016abd19150f_00000000"
+            ],
+            "dataItemSettings": [],
+            "caption": "Bars",
+            "id": "categories",
+            "layerId": "data"
+          },
+          {
+            "name": "values",
+            "dataItems": [
+              "model0000016abd19150f_00000001"
+            ],
+            "caption": "Length",
+            "id": "values"
+          },
+          {
+            "name": "color",
+            "dataItems": [
+              "model0000016abd195045_00000000"
+            ],
+            "caption": "Color",
+            "id": "color"
+          }
+        ]
+      },
+      "type": "live",
+      "name": {
+        "translationTable": {}
+      },
+      "visId": "com.ibm.vis.rave2bundlecolumn"
+    },
+    "model0000016abd1a7176_00000004": {
+      "id": "model0000016abd1a7176_00000004",
+      "data": {
+        "dataViews": [
+          {
+            "modelRef": "model0000016abd13e9d5_00000000",
+            "dataItems": [
+              {
+                "id": "model0000016abd1a7176_00000000",
+                "itemId": "MortgageTrainingData.aResidence",
+                "itemLabel": "Residence"
+              },
+              {
+                "id": "model0000016abd1a7176_00000001",
+                "itemId": "MortgageTrainingData.aMortgageDefault",
+                "itemLabel": "MortgageDefault",
+                "aggregate": "count"
+              }
+            ],
+            "id": "model0000016abd1a7176_00000002"
+          }
+        ]
+      },
+      "visTypeLocked": true,
+      "slotmapping": {
+        "slots": [
+          {
+            "name": "categories",
+            "dataItems": [
+              "model0000016abd1a7176_00000000"
+            ],
+            "dataItemSettings": [],
+            "caption": "Segments",
+            "id": "categories",
+            "layerId": "data"
+          },
+          {
+            "name": "values",
+            "dataItems": [
+              "model0000016abd1a7176_00000001"
+            ],
+            "caption": "Size",
+            "id": "values",
+            "layerId": "data"
+          }
+        ]
+      },
+      "type": "live",
+      "name": {
+        "translationTable": {}
+      },
+      "localFilters": [
+        {
+          "id": "MortgageTrainingData.aMortgageDefault",
+          "columnId": "MortgageTrainingData.aMortgageDefault",
+          "values": [
+            {
+              "d": "YES",
+              "u": "MortgageTrainingData.aMortgageDefault->[YES]"
+            }
+          ],
+          "excludedValues": [],
+          "operator": "in",
+          "type": null
+        }
+      ],
+      "visId": "com.ibm.vis.rave2bundlepie"
+    },
+    "model0000016abd1bd8dd_00000002": {
+      "id": "model0000016abd1bd8dd_00000002",
+      "data": {
+        "dataViews": [
+          {
+            "modelRef": "model0000016abd13e9d5_00000000",
+            "dataItems": [
+              {
+                "id": "model0000016abd1a7176_00000000",
+                "itemId": "MortgageTrainingData.aResidence",
+                "itemLabel": "Residence"
+              },
+              {
+                "id": "model0000016abd1a7176_00000001",
+                "itemId": "MortgageTrainingData.aMortgageDefault",
+                "itemLabel": "MortgageDefault",
+                "aggregate": "count"
+              }
+            ],
+            "id": "model0000016abd1a7176_00000002"
+          }
+        ]
+      },
+      "visTypeLocked": true,
+      "slotmapping": {
+        "slots": [
+          {
+            "name": "categories",
+            "dataItems": [
+              "model0000016abd1a7176_00000000"
+            ],
+            "dataItemSettings": [],
+            "caption": "Segments",
+            "id": "categories",
+            "layerId": "data"
+          },
+          {
+            "name": "values",
+            "dataItems": [
+              "model0000016abd1a7176_00000001"
+            ],
+            "caption": "Size",
+            "id": "values",
+            "layerId": "data"
+          }
+        ]
+      },
+      "type": "live",
+      "name": {
+        "translationTable": {}
+      },
+      "localFilters": [
+        {
+          "id": "MortgageTrainingData.aMortgageDefault",
+          "columnId": "MortgageTrainingData.aMortgageDefault",
+          "values": [
+            {
+              "d": "NO",
+              "u": "MortgageTrainingData.aMortgageDefault->[NO]"
+            }
+          ],
+          "operator": "in",
+          "type": null
+        }
+      ],
+      "visId": "com.ibm.vis.rave2bundlepie"
+    },
+    "model0000016abd1e0758_00000000": {
+      "id": "model0000016abd1e0758_00000000",
+      "data": {
+        "dataViews": [
+          {
+            "modelRef": "model0000016abd13e9d5_00000000",
+            "dataItems": [
+              {
+                "id": "model0000016abd1e0757_00000000",
+                "itemId": "MortgageTrainingData.aIncome",
+                "itemLabel": "Income"
+              },
+              {
+                "id": "model0000016abd1e0757_00000001",
+                "itemId": "MortgageTrainingData.aAppliedOnline",
+                "itemLabel": "AppliedOnline"
+              }
+            ],
+            "id": "model0000016abd1e0757_00000002"
+          }
+        ]
+      },
+      "slotmapping": {
+        "slots": [
+          {
+            "name": "categories",
+            "dataItems": [
+              "model0000016abd1e0757_00000001"
+            ],
+            "caption": "Bars",
+            "id": "categories",
+            "layerId": "data"
+          },
+          {
+            "name": "values",
+            "dataItems": [
+              "model0000016abd1e0757_00000000"
+            ],
+            "caption": "Length",
+            "id": "values",
+            "layerId": "data"
+          }
+        ]
+      },
+      "type": "live",
+      "name": {
+        "translationTable": {}
+      },
+      "visId": "com.ibm.vis.rave2bundlecolumn"
+    },
+    "model0000016abd1eac64_00000004": {
+      "id": "model0000016abd1eac64_00000004",
+      "data": {
+        "dataViews": [
+          {
+            "modelRef": "model0000016abd13e9d5_00000000",
+            "dataItems": [
+              {
+                "id": "model0000016abd1eac64_00000000",
+                "itemId": "MortgageTrainingData.aIncome",
+                "itemLabel": "Income"
+              },
+              {
+                "id": "model0000016abd1eac64_00000001",
+                "itemId": "MortgageTrainingData.aSalePrice",
+                "itemLabel": "SalePrice"
+              },
+              {
+                "id": "model0000016abd1eec47_00000000",
+                "itemId": "MortgageTrainingData.aSalePrice",
+                "itemLabel": "SalePrice"
+              }
+            ],
+            "id": "model0000016abd1eac64_00000002"
+          }
+        ]
+      },
+      "visTypeLocked": true,
+      "slotmapping": {
+        "slots": [
+          {
+            "name": "categories",
+            "dataItems": [
+              "model0000016abd1eac64_00000001"
+            ],
+            "dataItemSettings": [],
+            "caption": "Bubbles",
+            "id": "categories",
+            "layerId": "data"
+          },
+          {
+            "name": "size",
+            "dataItems": [
+              "model0000016abd1eac64_00000000"
+            ],
+            "caption": "Size",
+            "id": "size",
+            "layerId": "data"
+          },
+          {
+            "name": "color",
+            "dataItems": [
+              "model0000016abd1eec47_00000000"
+            ],
+            "caption": "Color",
+            "id": "color"
+          }
+        ]
+      },
+      "type": "live",
+      "name": {
+        "translationTable": {}
+      },
+      "visId": "com.ibm.vis.rave2bundlepackedbubble"
+    },
+    "model0000016abd233c5c_00000000": {
+      "id": "model0000016abd233c5c_00000000",
+      "type": "text",
+      "content": {
+        "translationTable": {
+          "Default": "<div class=\"staticContent textFillNoScroll\" dir=\"auto\"><div class=\"summernote\" style=\"display: none;\"></div><div class=\"note-editor\"><div class=\"note-dropzone\">  <div class=\"note-dropzone-message\"></div></div><div class=\"note-editing-area\"><div class=\"note-handle\"><div class=\"note-control-selection\"><div class=\"note-control-selection-bg\"></div><div class=\"note-control-holder note-control-nw\"></div><div class=\"note-control-holder note-control-ne\"></div><div class=\"note-control-holder note-control-sw\"></div><div class=\"note-control-sizing note-control-se\"></div><div class=\"note-control-selection-info\"></div></div></div><div class=\"note-editable\" contenteditable=\"false\"><p class=\"responsiveColor responsiveFontSize responsiveFontFamily\" style=\"font-size: 24px;\">Income Insights</p></div></div></div></div>"
+        }
+      },
+      "isResponsive": true,
+      "visTypeLocked": true,
+      "name": ""
+    },
+    "model0000016abd2343a3_00000000": {
+      "id": "model0000016abd2343a3_00000000",
+      "type": "text",
+      "content": {
+        "translationTable": {
+          "Default": "<div class=\"staticContent textFillNoScroll\" dir=\"auto\"><div class=\"summernote\" style=\"display: none;\"></div><div class=\"note-editor\"><div class=\"note-dropzone\">  <div class=\"note-dropzone-message\"></div></div><div class=\"note-editing-area\"><div class=\"note-handle\"><div class=\"note-control-selection\"><div class=\"note-control-selection-bg\"></div><div class=\"note-control-holder note-control-nw\"></div><div class=\"note-control-holder note-control-ne\"></div><div class=\"note-control-holder note-control-sw\"></div><div class=\"note-control-sizing note-control-se\"></div><div class=\"note-control-selection-info\"></div></div></div><div class=\"note-editable\" contenteditable=\"false\"><p class=\"responsiveColor responsiveFontSize responsiveFontFamily\" style=\"font-size: 18px;\"><span>Residence Insights - Mortgage Default: yes</span></p></div></div></div></div>"
+        }
+      },
+      "isResponsive": true,
+      "visTypeLocked": true,
+      "name": ""
+    },
+    "model0000016abd23b2b4_00000000": {
+      "id": "model0000016abd23b2b4_00000000",
+      "type": "text",
+      "content": {
+        "translationTable": {
+          "Default": "<div class=\"staticContent textFillNoScroll\" dir=\"auto\"><div class=\"summernote\" style=\"display: none;\"></div><div class=\"note-editor\"><div class=\"note-dropzone\">  <div class=\"note-dropzone-message\"></div></div><div class=\"note-editing-area\"><div class=\"note-handle\"><div class=\"note-control-selection\"><div class=\"note-control-selection-bg\"></div><div class=\"note-control-holder note-control-nw\"></div><div class=\"note-control-holder note-control-ne\"></div><div class=\"note-control-holder note-control-sw\"></div><div class=\"note-control-sizing note-control-se\"></div><div class=\"note-control-selection-info\"></div></div></div><div class=\"note-editable\" contenteditable=\"false\"><p class=\"responsiveColor responsiveFontSize responsiveFontFamily\" style=\"font-size: 21px;\">Sales Price Insights</p></div></div></div></div>"
+        }
+      },
+      "isResponsive": true,
+      "visTypeLocked": true,
+      "name": ""
+    },
+    "model0000016abd24b4c2_00000000": {
+      "id": "model0000016abd24b4c2_00000000",
+      "type": "text",
+      "content": {
+        "translationTable": {
+          "Default": "<div class=\"staticContent textFillNoScroll\" dir=\"auto\"><div class=\"summernote\" style=\"display: none;\"></div><div class=\"note-editor\"><div class=\"note-dropzone\">  <div class=\"note-dropzone-message\"></div></div><div class=\"note-editing-area\"><div class=\"note-handle\"><div class=\"note-control-selection\"><div class=\"note-control-selection-bg\"></div><div class=\"note-control-holder note-control-nw\"></div><div class=\"note-control-holder note-control-ne\"></div><div class=\"note-control-holder note-control-sw\"></div><div class=\"note-control-sizing note-control-se\"></div><div class=\"note-control-selection-info\"></div></div></div><div class=\"note-editable\" contenteditable=\"false\"><p class=\"responsiveColor responsiveFontSize responsiveFontFamily\" style=\"font-size: 18px;\"><span>Residence Insights - Mortgage Default: no</span></p></div></div></div></div>"
+        }
+      },
+      "isResponsive": true,
+      "visTypeLocked": true,
+      "name": ""
+    },
+    "model0000016abd251eea_00000000": {
+      "id": "model0000016abd251eea_00000000",
+      "type": "text",
+      "content": {
+        "translationTable": {
+          "Default": "<div class=\"staticContent textFillNoScroll\" dir=\"auto\"><div class=\"summernote\" style=\"display: none;\"></div><div class=\"note-editor\"><div class=\"note-dropzone\">  <div class=\"note-dropzone-message\"></div></div><div class=\"note-editing-area\"><div class=\"note-handle\"><div class=\"note-control-selection\"><div class=\"note-control-selection-bg\"></div><div class=\"note-control-holder note-control-nw\"></div><div class=\"note-control-holder note-control-ne\"></div><div class=\"note-control-holder note-control-sw\"></div><div class=\"note-control-sizing note-control-se\"></div><div class=\"note-control-selection-info\"></div></div></div><div class=\"note-editable\" contenteditable=\"false\"><p class=\"responsiveColor responsiveFontSize responsiveFontFamily\" style=\"font-size: 24px;\"><span>Other Insights</span></p></div></div></div></div>"
+        }
+      },
+      "isResponsive": true,
+      "visTypeLocked": true,
+      "name": ""
+    }
+  }
+}
