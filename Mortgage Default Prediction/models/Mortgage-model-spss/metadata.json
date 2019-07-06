@@ -1,0 +1,70 @@
+{
+    "id": 1557950217937,
+    "name": "Mortgage-model-spss",
+    "latestModelVersion": 1,
+    "runtime": "SPSS PMML Scoring Engine",
+    "author": "1002",
+    "createdAt": 1557950217937,
+    "filename": "import",
+    "features": [
+        {
+            "name": "Location",
+            "type": "integer"
+        },
+        {
+            "name": "Residence",
+            "type": "string"
+        },
+        {
+            "name": "Income",
+            "type": "double"
+        },
+        {
+            "name": "CCDebt",
+            "type": "double"
+        },
+        {
+            "name": "NumberOfCards",
+            "type": "double"
+        },
+        {
+            "name": "YearsCurrentEmployer",
+            "type": "double"
+        },
+        {
+            "name": "Loans",
+            "type": "double"
+        },
+        {
+            "name": "LoanAmount",
+            "type": "double"
+        },
+        {
+            "name": "SalePrice",
+            "type": "integer"
+        },
+        {
+            "name": "AppliedOnline",
+            "type": "string"
+        },
+        {
+            "name": "YearCurrentAddress",
+            "type": "double"
+        }
+    ],
+    "labelColumns": [
+        {
+            "name": "MortgageDefault",
+            "type": "string"
+        }
+    ],
+    "type": "pmml-model-3.0",
+    "serialization": "pmml",
+    "learningType": "Supervised",
+    "algorithm": "TreeModel",
+    "algorithmType": "Classification",
+    "params": {},
+    "publishedBy": "",
+    "isPublished": false,
+    "publishedModelVersion": -1
+}

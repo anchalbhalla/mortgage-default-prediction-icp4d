@@ -1,0 +1,86 @@
+{
+    "algorithm": "PipelineModel",
+    "algorithmType": "Classification",
+    "author": "1002",
+    "createdAt": 1557949459237,
+    "features": [
+        {
+            "name": "ID",
+            "sample": 100282,
+            "type": "int"
+        },
+        {
+            "name": "Income",
+            "sample": 45715,
+            "type": "int"
+        },
+        {
+            "name": "AppliedOnline",
+            "sample": "YES",
+            "type": "str"
+        },
+        {
+            "name": "Residence",
+            "sample": "Owner Occupier",
+            "type": "str"
+        },
+        {
+            "name": "YearCurrentAddress",
+            "sample": 8,
+            "type": "int"
+        },
+        {
+            "name": "YearsCurrentEmployer",
+            "sample": 14,
+            "type": "int"
+        },
+        {
+            "name": "NumberOfCards",
+            "sample": 2,
+            "type": "int"
+        },
+        {
+            "name": "CCDebt",
+            "sample": 772,
+            "type": "int"
+        },
+        {
+            "name": "Loans",
+            "sample": 1,
+            "type": "int"
+        },
+        {
+            "name": "LoanAmount",
+            "sample": 12985,
+            "type": "int"
+        },
+        {
+            "name": "SalePrice",
+            "sample": 137000,
+            "type": "int"
+        },
+        {
+            "name": "Location",
+            "sample": 100,
+            "type": "int"
+        }
+    ],
+    "id": 1557949459237,
+    "isPublished": false,
+    "labelColumns": [
+        {
+            "name": "MortgageDefault",
+            "type": "str"
+        }
+    ],
+    "latestModelVersion": 1,
+    "learningType": "Supervised",
+    "name": "Predict Mortgage Default model- openscale",
+    "params": {},
+    "publishedBy": "",
+    "publishedModelVersion": -1,
+    "runtime": "Python36",
+    "serialization": "spark",
+    "source": "",
+    "type": "spark-2.3"
+}
